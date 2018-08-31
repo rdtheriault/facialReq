@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head><meta http-equiv="Content-Type" content="text/html; charset=us-ascii">
+  <script src="face-api.js"></script>
+  <script src="compare.js"></script>
+  <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <style>
+    img {
+      width: 150px;
+    }
+    #face2 {
+      width: auto;
+      height: 230px; 
+    }
+    .side-by-side {
+      display: flex;
+    }
+  </style>
+</head>
+<body>
+  <div id="navbar"></div>
+  <div class="center-content page-container">
+    <div>
+      <div class="progress" id="loader">
+        <div class="indeterminate"></div>
+      </div>
+      <div class="row side-by-side">
+        <div class="center-content">
+          <img id="face1" src="" class="margin"/>
+          <div id="selectList1"></div>
+        </div>
+        <div class="center-content">
+          <img id="face2" src="" class="margin"/>
+          <div id="selectList2"></div>
+        </div>
+      </div>
+      <div class="row">
+        <label for="distance">Distance:</label>
+        <input disabled value="-" id="distance" type="text" class="bold">
+      </div>
+      <button id="go">Compare</button>
+    </div>
+  </div>
+  <input type="file" name="client-file" id="get-file" />
+  <script>
+ 	$(document).ready(function() {
+           document.getElementById("go").addEventListener("click",run);
+	})
+  </script>
+  <div id="error"></div>
+</body>
+</html>
