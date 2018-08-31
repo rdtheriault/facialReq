@@ -27,13 +27,12 @@ async function getPic(file) {
       //const imgBuf = await fetchImage(file)  
       //const imgBuf = await fetchImage("rdtnew.jpg")
       //const input = await faceapi.bufferToImage(imgBuf)
-      //const input = await faceapi.bufferToImage(file)
+      const input = await faceapi.bufferToImage(file)
       //const input = await file.blob()
       //const imgEl = $(`#face2`).get(0)
       //imgEl.src = input.src
-alert("test");
-      incoming = await faceapi.computeFaceDescriptor(file)
-      //incoming = await faceapi.computeFaceDescriptor(input)
+      //incoming = await faceapi.computeFaceDescriptor(file)
+      incoming = await faceapi.computeFaceDescriptor(input)
 }
 
 //compare
